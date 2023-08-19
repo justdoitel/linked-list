@@ -1,0 +1,108 @@
+.linked-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+    min-height: 100px;
+    padding: 15px;
+    position: relative;
+    margin: 10px 0px;
+    background-color: hsl(0, 0%, 90%);
+}
+
+button {
+    cursor: pointer;
+}
+
+.node {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 1.5em;
+}
+
+.value, .next {
+    padding: 0.5em;
+}
+
+body {
+    padding: 30px;
+}
+
+.value {
+    border-right: 1px solid black;
+}
+
+#addlinklist{
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.del {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    height: 30px;
+    width: 30px;
+    display: none;
+}
+
+.linked-list:hover .del {
+    display: block;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+
+  #overlay.active {
+    display: block;
+  }
+
+.error {
+    border-color: red;
+    border-radius: 5px;
+}
+
+.card {
+    display: grid;
+    width: 50%;
+    grid-template-columns: 1fr 1fr;
+    font-size: max(32px, 1em);
+
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    
+}
+
+input, #removeTail, #removeHead {
+    grid-column: span 2;
+    font-size: max(18px, 1em);
+}
+
+#prepend, #append {
+    background-color: rgb(76, 186, 52);
+    padding: 6px 0;
+    font-size: max(16px, 0.5em);
+    
+}
+
+#removeTail, #removeHead {
+    background-color: rgb(187, 28, 28);
+    padding: 6px 0;
+    font-size: max(16px, 0.5em);
+   
+}
